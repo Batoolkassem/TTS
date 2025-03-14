@@ -200,7 +200,7 @@ if __name__ == "__main__":
                 label="Logs:",
                 interactive=False,
             )
-            demo.load(read_logs, None, logs, every=1)
+            demo.load(read_logs, None, logs)
 
             prompt_compute_btn = gr.Button(value="Step 1 - Create dataset")
         
@@ -271,7 +271,7 @@ if __name__ == "__main__":
                 label="Logs:",
                 interactive=False,
             )
-            demo.load(read_logs, None, logs_tts_train, every=1)
+            demo.load(read_logs, None, logs_tts_train)
             train_btn = gr.Button(value="Step 2 - Run the training")
 
             def train_model(language, train_csv, eval_csv, num_epochs, batch_size, grad_acumm, output_path, max_audio_length):
